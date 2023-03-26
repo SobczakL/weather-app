@@ -1,0 +1,28 @@
+@use './fonts' as *;
+
+$root-font-size: 16px;
+
+$lm-lightBlue: #B2D0EC;
+$lm-chalk: #FBF7F7;
+$lm-charcoal: #3F3C3C;
+$lm-midnightBlue: #1E6598;
+$lm-paleBlue: #CBDBE8;
+
+$font-reg: 'AveReg';
+$font-bold: 'AveBold';
+
+$fw-reg: 400;
+$fw-bold: 700;
+
+$screenBreak-tablet: 768px;
+$screenBreak-desktop: 1280px;
+
+$fs-mobile-header: 2.6rem;
+$fs-mobile-subheader: 1.25rem;
+$fs-mobile-body: 1rem;
+$fs-mobile-labels: .7rem;
+
+$fs-tablet-header: 5rem;
+$fs-tablet-subheader: 2rem;
+$fs-tablet-body: 1.5rem;
+$fs-tablet-labels: 1.15rem;

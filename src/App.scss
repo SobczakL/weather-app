@@ -1,0 +1,18 @@
+:root {
+    font-size: 16px;
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #b2d0ec;
+    width: 100vw;
+    height: 100vh;
+    &-main{
+        background-color: aquamarine;
+        width: 200px;
+        height: 200px;
+    }
+}

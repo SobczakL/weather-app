@@ -25,8 +25,9 @@ function Main() {
 
     return (
         <div>
-            <Header />
-            
+            <Header 
+            location={cityName}
+            />
         </div>
     )
 }

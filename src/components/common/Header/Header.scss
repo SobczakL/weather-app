@@ -1,0 +1,22 @@
+@use '../../../styles/partials/mixins' as *;
+@use '../../../styles/partials/variables' as *;
+@use '../../../styles/partials/fonts' as *;
+
+.header{
+    @include widthSet(100%, null, 100%);
+    @include heightSet(1.5rem, null, null);
+    @include flexboxSet(row, center, 1rem);
+    @include sectionPadding;
+    box-sizing: border-box;
+    align-items: center;
+    position:relative;
+    &__locationIcon{
+        @include widthSet(null, null, null);
+        @include heightSet(1.25rem, null, null);
+        left: 1.56rem;
+    }
+    &__locationName{
+        margin: 0;
+        @include subheader-fontSet;
+    }
+}

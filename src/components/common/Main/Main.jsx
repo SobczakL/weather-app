@@ -1,33 +1,21 @@
-import Header from "../Header/Header";
-import { getLocation } from '../../../utils/getLocation';
-import { getWeatherData } from '../../../services/api/getWeatherData';
-import { useState, useEffect } from 'react';
+import './Main.scss';
 
-function Main() {
-    const [weatherData, setWeatherData] = useState(null)
-    const [cityName, setCityName] = useState(null);
+function Main({currentTemp, tempImageRef, currentHumidity, currentWind}) {
 
-    useEffect(() => {
-        async function fetchWeatherData(){
-            try{
-                const {latitude, longitude} = await getLocation()
-                const weather = await getWeatherData(latitude, longitude);
-
-                setWeatherData(weather)
-                setCityName(weather.name)
-            }
-            catch (error){
-                console.error(error)
-            }
-        }
-        fetchWeatherData()
-    },[])
-
+    const weatherIcon = `https://openweathermap.org/img/wn/${tempImageRef}@2x.png`
     return (
-        <div>
-            <Header 
-            location={cityName}
-            />
+        <div className="main">
+            <div className='main__hero'>
+                <img className='main__hero-img'
+                src={weatherIcon}
+                alt='Weather'
+                ></img>
+                <h1 className='main__hero-degree'>{currentTemp}</h1>
+            </div>
+            <div className='main__subContainer'>
+                <h3>{currentHumidity}</h3>
+                <h3>{currentWind}</h3>
+            </div>
         </div>
     )
 }

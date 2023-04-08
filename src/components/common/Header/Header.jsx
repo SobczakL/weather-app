@@ -1,11 +1,11 @@
 import React from 'react'
-import {ReactComponent as LocationIcon} from '../../../assets/icons/location-dot.svg';
+import {MdLocationOn} from 'react-icons/md'
 import './Header.scss';
 
 function Header({userLocation}) {
   return (
     <div className='header'>
-      <LocationIcon
+      <MdLocationOn
       className='header__locationIcon'
       />
       <h2 className='header__locationName'>{userLocation}</h2>

@@ -6,6 +6,10 @@
     @include flexboxSet(column, flex-start, null);
     @include widthSet(100%, null, 100%);
     @include heightSet(100%, null, 100%);
+    @media (min-width: $screenBreak-tablet) {
+        gap: 1rem;
+        justify-content: center;
+    }
     &__hero{
         @include widthSet(100%, null, 100%);
         @include heightSet(70%, null, 70%);
@@ -14,6 +18,7 @@
         align-items: center;
         @media (min-width: $screenBreak-tablet) {
             gap: 1rem;
+
         }
         &-img{
             @include heightSet(8.1rem, null, 8.1rem);
@@ -42,13 +47,17 @@
             &--icon{
                 @include heightSet(2rem, null, 2rem);
                 @include widthSet(2rem, null, 2rem);
-
+                color: #1E6598;
+                @media (min-width: $screenBreak-tablet) {
+                    @include heightSet(3rem, null, 3rem);
+                    @include widthSet(3rem, null, 3rem);
+                }
             }
             &--text{
-            
+                @include bodyCopy-fontSet;
             }
             &--subtext{
-                @include bodyCopy-fontSet;
+                @include labelsButtons-fontSet;
             }
         }
         &-wind{
@@ -57,12 +66,17 @@
             &--icon{
                 @include heightSet(2rem, null, 2rem);
                 @include widthSet(2rem, null, 2rem);
+                color: #1E6598;
+                @media (min-width: $screenBreak-tablet) {
+                    @include heightSet(3rem, null, 3rem);
+                    @include widthSet(3rem, null, 3rem);
+                }
             }
             &--text{
-                
+                @include bodyCopy-fontSet;
             }
             &--subtext{
-                @include bodyCopy-fontSet;
+                @include labelsButtons-fontSet;
             }
         }
     }

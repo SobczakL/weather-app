@@ -1,0 +1,83 @@
+@use '../../../styles/partials/mixins' as *;
+@use '../../../styles/partials/variables' as *;
+@use '../../../styles/partials/fonts' as *;
+
+.main{
+    @include flexboxSet(column, flex-start, null);
+    @include widthSet(100%, null, 100%);
+    @include heightSet(100%, null, 100%);
+    @media (min-width: $screenBreak-tablet) {
+        gap: 1rem;
+        justify-content: center;
+    }
+    &__hero{
+        @include widthSet(100%, null, 100%);
+        @include heightSet(70%, null, 70%);
+        @include flexboxSet(column, flex-start, .25rem);
+        @include headerPadding;
+        align-items: center;
+        @media (min-width: $screenBreak-tablet) {
+            gap: 1rem;
+
+        }
+        &-img{
+            @include heightSet(8.1rem, null, 8.1rem);
+            @include widthSet(8.1rem, null, 8.1rem);
+            @media(min-width: $screenBreak-tablet){
+                @include heightSet(12.5rem, null, 12.5rem);
+                @include widthSet(12.5rem, null, 12.5rem);
+            }
+
+        }
+        &-degree{
+            @include pageHeader-fontSet;
+            margin: 0;
+        }
+        &-tempName{
+            @include subheader-fontSet;
+            margin: 0;
+
+        }
+    }
+    &__container{
+        @include flexboxSet(row, space-around, null);
+        &-humidity{
+            @include flexboxSet(column, center, .25rem);
+            align-items: center;
+            &--icon{
+                @include heightSet(2rem, null, 2rem);
+                @include widthSet(2rem, null, 2rem);
+                color: #1E6598;
+                @media (min-width: $screenBreak-tablet) {
+                    @include heightSet(3rem, null, 3rem);
+                    @include widthSet(3rem, null, 3rem);
+                }
+            }
+            &--text{
+                @include bodyCopy-fontSet;
+            }
+            &--subtext{
+                @include labelsButtons-fontSet;
+            }
+        }
+        &-wind{
+            @include flexboxSet(column, center, .25rem);
+            align-items: center;
+            &--icon{
+                @include heightSet(2rem, null, 2rem);
+                @include widthSet(2rem, null, 2rem);
+                color: #1E6598;
+                @media (min-width: $screenBreak-tablet) {
+                    @include heightSet(3rem, null, 3rem);
+                    @include widthSet(3rem, null, 3rem);
+                }
+            }
+            &--text{
+                @include bodyCopy-fontSet;
+            }
+            &--subtext{
+                @include labelsButtons-fontSet;
+            }
+        }
+    }
+}

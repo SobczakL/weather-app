@@ -1,0 +1,16 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/fonts' as *;
+
+.mainCard{
+    @include heightSet(23.75rem, null, 24rem);
+    @include widthSet(17.5rem, null, 18rem);
+    @include headerPadding;
+    border-radius: 1rem;
+    background-color: white;
+    @media(min-width: $screenBreak-tablet){
+        @include heightSet(34rem, null, 34rem);
+        @include widthSet(28rem, null, 28rem);
+    }
+
+}

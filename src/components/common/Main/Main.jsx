@@ -1,33 +1,37 @@
-import Header from "../Header/Header";
-import { getLocation } from '../../../utils/getLocation';
-import { getWeatherData } from '../../../services/api/getWeatherData';
-import { useState, useEffect } from 'react';
+import {WiHumidity} from 'react-icons/wi'
+import {FiWind} from 'react-icons/fi'
+import './Main.scss';
 
-function Main() {
-    const [weatherData, setWeatherData] = useState(null)
-    const [cityName, setCityName] = useState(null);
+function Main({currentTemp, tempImageRef, tempNameRef, currentHumidity, currentWind}) {
 
-    useEffect(() => {
-        async function fetchWeatherData(){
-            try{
-                const {latitude, longitude} = await getLocation()
-                const weather = await getWeatherData(latitude, longitude);
-
-                setWeatherData(weather)
-                setCityName(weather.name)
-            }
-            catch (error){
-                console.error(error)
-            }
-        }
-        fetchWeatherData()
-    },[])
-
+    const weatherImg = `https://openweathermap.org/img/wn/${tempImageRef}@2x.png`
     return (
-        <div>
-            <Header />
-            
-        </div>
+        <section className="main">
+            <div className='main__hero'>
+                <img className='main__hero-img'
+                src={weatherImg}
+                alt='Weather'
+                ></img>
+                <h1 className='main__hero-degree'>{currentTemp}°</h1>
+                <h3 className='main__hero-tempName'>{tempNameRef}</h3>
+            </div>
+            <div className='main__container'>
+                <div className='main__container-humidity'>
+                    <WiHumidity
+                    className='main__container-humidity--icon'
+                    />
+                    <h3 className='main__container-humidity--text'>{currentHumidity}%</h3>
+                    <h4 className='main__container-humidity--subtext'>Humidity</h4>
+                </div>
+                <div className='main__container-wind'>
+                    <FiWind
+                    className='main__container-wind--icon'
+                    />
+                    <h3 className='main__container-wind--text'>{currentWind} km/h</h3>
+                    <h4 className='main__container-wind--subtext'>Wind Speed</h4>
+                </div>
+            </div>
+        </section>
     )
 }
 

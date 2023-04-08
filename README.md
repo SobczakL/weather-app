@@ -7,6 +7,10 @@
 
 This is a personal project built in my spare time for learning purposes.
 
+### Usage
+
+To use the weather app, fork the project and npm install into the parent directory. Enter npm start into your terminal to run on your localhost.
+
 ### APIs
 
 - [OpenWeatherMap](https://openweathermap.org/)

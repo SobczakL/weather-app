@@ -8,5 +8,9 @@
     @include headerPadding;
     border-radius: 1rem;
     background-color: white;
+    @media(min-width: $screenBreak-tablet){
+        @include heightSet(34rem, null, 34rem);
+        @include widthSet(28rem, null, 28rem);
+    }
 
 }

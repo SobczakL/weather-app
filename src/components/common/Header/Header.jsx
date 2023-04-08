@@ -1,5 +1,5 @@
 import React from 'react'
-import {ReactComponent as LocationIcon} from '../../../assets/icons/location-dot-solid.svg';
+import {ReactComponent as LocationIcon} from '../../../assets/icons/location-dot.svg';
 import './Header.scss';
 
 function Header({userLocation}) {

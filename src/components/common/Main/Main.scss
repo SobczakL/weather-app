@@ -3,21 +3,67 @@
 @use '../../../styles/partials/fonts' as *;
 
 .main{
-    @include flexboxSet(column, center, 1rem);
+    @include flexboxSet(column, flex-start, null);
     @include widthSet(100%, null, 100%);
     @include heightSet(100%, null, 100%);
     &__hero{
         @include widthSet(100%, null, 100%);
-        @include heightSet(80%, null, 80%);
-        @include flexboxSet(column, flex-end, .5rem);
-        margin: 0 auto;
+        @include heightSet(70%, null, 70%);
+        @include flexboxSet(column, flex-start, .25rem);
+        @include headerPadding;
+        align-items: center;
+        @media (min-width: $screenBreak-tablet) {
+            gap: 1rem;
+        }
         &-img{
             @include heightSet(8.1rem, null, 8.1rem);
             @include widthSet(8.1rem, null, 8.1rem);
+            @media(min-width: $screenBreak-tablet){
+                @include heightSet(12.5rem, null, 12.5rem);
+                @include widthSet(12.5rem, null, 12.5rem);
+            }
 
         }
         &-degree{
-            width: fit-content;
+            @include pageHeader-fontSet;
+            margin: 0;
+        }
+        &-tempName{
+            @include subheader-fontSet;
+            margin: 0;
+
+        }
+    }
+    &__container{
+        @include flexboxSet(row, space-around, null);
+        &-humidity{
+            @include flexboxSet(column, center, .25rem);
+            align-items: center;
+            &--icon{
+                @include heightSet(2rem, null, 2rem);
+                @include widthSet(2rem, null, 2rem);
+
+            }
+            &--text{
+            
+            }
+            &--subtext{
+                @include bodyCopy-fontSet;
+            }
+        }
+        &-wind{
+            @include flexboxSet(column, center, .25rem);
+            align-items: center;
+            &--icon{
+                @include heightSet(2rem, null, 2rem);
+                @include widthSet(2rem, null, 2rem);
+            }
+            &--text{
+                
+            }
+            &--subtext{
+                @include bodyCopy-fontSet;
+            }
         }
     }
 }

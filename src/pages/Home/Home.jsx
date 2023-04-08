@@ -1,9 +1,6 @@
 import Header from '../../components/common/Header/Header';
 import Main from '../../components/common/Main/Main';
 import useData from '../../utils/useData';
-import { useState, useEffect } from 'react';
-import { baseURL } from '../../utils/baseURL';
-import { apiKey } from '../../utils/apiKey';
 import './Home.scss';
 
 function Home() {
@@ -19,18 +16,17 @@ function Home() {
 
     }
 
-    console.log(data)
-
     return (
         <div className='mainCard'>
             <Header 
             userLocation={data?.name}
             />
             <Main 
-            currentTemp={data?.main.temp}
+            currentTemp={Math.round(data?.main.temp)}
             tempImageRef={data?.weather[0].icon}
-            currentHumidity={data?.main.humidity}
-            currentWind={data?.wind.speed}
+            tempNameRef={data?.weather[0].description}
+            currentHumidity={Math.round(data?.main.humidity)}
+            currentWind={Math.round(data?.wind.speed)}
             />
         </div>
     )

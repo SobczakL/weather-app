@@ -58,10 +58,10 @@
 @mixin pageHeader-fontSet{
     font-family: $font-bold;
     font-weight: $fw-bold;
-    font-size: 1.5rem;
+    font-size: 2.6rem;
     line-height: 2rem;
     @media (min-width: $screenBreak-tablet){
-        font-size: 2.06rem;
+        font-size: 5rem;
         line-height: 2.75rem;
     }
 }

@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "AveReg";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/fonts/Alt-files/AvenirNextLTPro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "AveBold";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"), url("../../assets/fonts/Alt-files/AvenirNextLTProBold.ttf") format("truetype");
+}
+.mainCard {
+  height: 23.75rem;
+  max-height: 24rem;
+  width: 17.5rem;
+  max-width: 18rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-radius: 1rem;
+  background-color: white;
+}
+@media (min-width: 768px) {
+  .mainCard {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .mainCard {
+    height: 34rem;
+    max-height: 34rem;
+    width: 28rem;
+    max-width: 28rem;
+  }
+}/*# sourceMappingURL=Home.css.map */

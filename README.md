@@ -1,26 +1,45 @@
-# Weather app made with React
+# Weather App
 
-### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+### The Weather App is a web application that allows users to get current weather information and forecasts for different locations.
 
 ---
-## About
 
-This is a personal project built in my spare time for learning purposes.
+### Features
 
-### Usage
+ - Retrieve and display current weather conditions for a specific location.
+ - Show current forecast with details such as temperature, humidity, and wind speed.
+ - Responsive design for optimal viewing on various devices.
 
-To use the weather app, fork the project and npm install into the parent directory. Enter npm start into your terminal to run on your localhost.
+### Technologies Used
 
-### APIs
+ - JavaScript / React
+ - CSS / Sass
+
+### APIs Used
 
 - [OpenWeatherMap](https://openweathermap.org/)
 
-### Features
-- PWA
-- Responsive
+### Usage
+1. Clone the repository:
+```
+{
+git clone https://github.com/SobczakL/weather-app.git
+}
+```
+2. Run the following command in your terminal:
+```
+{
+npm start
+}
+```
 
-### Built with
-- ES6
-- Sass
-- React
-- React Icons
+3. Allow your browser to use your current location
+
+### Screenshots
+![Weather-app screenshot](<img width="593" alt="Screenshot 2023-05-31 at 9 20 51 AM" src="https://github.com/SobczakL/weather-app/assets/36972429/a30844e8-7d7a-44cd-90bf-ae40b05d2c47">)
+
+### Contributing
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
+
+
+

@@ -22,21 +22,17 @@
 ### Usage
 1. Clone the repository:
 ```
-{
 git clone https://github.com/SobczakL/weather-app.git
-}
 ```
 2. Run the following command in your terminal:
 ```
-{
 npm start
-}
 ```
 
 3. Allow your browser to use your current location
 
 ### Screenshots
-![Weather-app screenshot](<img width="593" alt="Screenshot 2023-05-31 at 9 20 51 AM" src="https://github.com/SobczakL/weather-app/assets/36972429/a30844e8-7d7a-44cd-90bf-ae40b05d2c47">)
+![Weather-app screenshot](https://github.com/SobczakL/weather-app/assets/36972429/a30844e8-7d7a-44cd-90bf-ae40b05d2c47)
 
 ### Contributing
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.

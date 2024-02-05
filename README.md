@@ -24,7 +24,11 @@
 ```
 git clone https://github.com/SobczakL/weather-app.git
 ```
-2. Run the following command in your terminal:
+2. Download dependencies:
+```
+npm install
+```
+3. Run the following command in your terminal:
 ```
 npm start
 ```
